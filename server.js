@@ -10,6 +10,9 @@ require('dotenv').config();
 // Connect to the database
 require('./config/database');
 
+var booksRouter = require("./routes/api/books");
+var usersRouter = require('./routes/api/users');
+
 const app = express();
 
 app.use(logger('dev'));
@@ -25,10 +28,11 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use(require('./config/checkToken'));
 
 // Put API routes here, before the "catch all" route
-app.use('/api/users', require('./routes/api/users'));
+app.use('/api/users', usersRouter);
 
 // Protect the api routes below from anonymous users
 const ensureLoggedIn = require('./config/ensureLoggedIn');
+app.use("/api/books", booksRouter);
 // app.use('/api/items', ensureLoggedIn, require('./routes/api/items'));
 // app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'));
 
