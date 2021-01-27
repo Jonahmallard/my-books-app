@@ -5,9 +5,9 @@ function BookListItem({ book, handleDeleteBook}) {
   return (
     <div className='panel panel-default'>
       <div className="panel-heading">
-        <h1 className='panel-title'>{book.title}</h1>
-        <h3 className='panel-title'>By {book.author}</h3>
-        <p className='panel-title'>{book.description}</p>
+        <h1>{book.title}</h1>
+        <h3>By {book.author}</h3>
+        <p>{book.description}</p>
       </div>
       <div className='panel-footer BookListItem-action-panel'>
         <Link
