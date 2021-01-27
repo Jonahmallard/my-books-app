@@ -9,14 +9,14 @@ function BookCard({book}) {
       </div>
       <div className='panel-body'>
         <dl>
-          <dt>Title</dt>
+          <dt>Title :</dt>
           <dd>{book.title}</dd>
-          <dt>Author</dt>
+          <dt>Author: </dt>
           <dd>{book.author}</dd>
         </dl>
       </div>
       <div className='panel-footer'>
-        <Link to='/index'>RETURN TO LIST</Link>
+        <Link to='/'>RETURN TO LIST</Link>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import {Link, useLocation} from 'react-router-dom';
 export default function EditBookPage(props){
   const location = useLocation()
   const [invalidForm, setInvalidForm] = useState(true);
-  const [formData, setFormData] = useState(location.state.puppy)
+  const [formData, setFormData] = useState(location.state.book)
   const formRef = useRef();
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function EditBookPage(props){
       <h1>Edit Book</h1>
       <form ref={formRef} autoComplete="off" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Book's Title (required)</label>
+          <label>Book's Title</label>
           <input
             className="form-control"
             name="title"
@@ -38,7 +38,7 @@ export default function EditBookPage(props){
           />
         </div>
         <div className="form-group">
-          <label>Book's Author (required)</label>
+          <label>Book's Author</label>
           <input
             className="form-control"
             name="author"

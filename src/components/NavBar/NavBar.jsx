@@ -12,7 +12,7 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <NavLink exact style={{textDecoration: 'none', color: 'black'}} exact to='/index'>Home</NavLink>
+      <NavLink exact style={{textDecoration: 'none', color: 'black'}} exact to='/'>Home</NavLink>
       &nbsp; | &nbsp;
       <NavLink exact style={{textDecoration: 'none', color: 'black'}} exact to='/index/new'>New</NavLink>
       &nbsp;&nbsp;

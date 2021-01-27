@@ -1,5 +1,4 @@
 import React from 'react';
-import './BookListPage.css';
 import BookListItem from '../../components/BookListItem/BookListItem';
 
 function BookListPage({ books, handleDeleteBook}) {

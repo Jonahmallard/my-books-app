@@ -4,8 +4,6 @@ import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
-import NewPage from '../NewPage/NewPage';
-import HistoryPage from '../HistoryPage/HistoryPage';
 import * as bookAPI from '../../utilities/books-api';
 import BookListPage from '../BookListPage/BookListPage';
 import AddBookPage from '../AddBookPage/AddBookPage';
@@ -52,10 +50,7 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Switch>
-            <Route path="/index/new">
-              <NewPage user={user} setUser={setUser} />
-            </Route>
-            <Route exact path='/index' render={() => 
+            <Route exact path='/' render={() => 
               <BookListPage books={books} handleDeleteBook={handleDeleteBook} />
             } />
             <Route exact path='/index/new' render={() => 
@@ -67,10 +62,7 @@ export default function App() {
             <Route exact path="/edit">
               <EditBookPage handleUpdateBook={handleUpdateBook} />
             </Route>
-            <Route path="/index">
-              <HistoryPage user={user} setUser={setUser} />
-            </Route>
-            <Redirect to="/index" />
+            <Redirect to="/" />
           </Switch>
         </>
         :
