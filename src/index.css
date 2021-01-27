@@ -75,3 +75,7 @@ a.active {
   background-color: var(--black);
   cursor: default;
 }
+
+.panel-heading {
+  justify-content: center;
+}

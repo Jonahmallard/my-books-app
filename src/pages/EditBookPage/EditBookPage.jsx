@@ -32,8 +32,8 @@ export default function EditBookPage(props){
           <input
             className="form-control"
             name="title"
-            value={ formData.title}
-            onChange={ handleChange}
+            value={formData.title}
+            onChange={handleChange}
             required
           />
         </div>
@@ -42,8 +42,8 @@ export default function EditBookPage(props){
           <input
             className="form-control"
             name="author"
-            value={ formData.author}
-            onChange={ handleChange}
+            value={formData.author}
+            onChange={handleChange}
             required
           />
         </div>
@@ -52,8 +52,8 @@ export default function EditBookPage(props){
           <input
             className="form-control"
             name="description"
-            value={ formData.description}
-            onChange={ handleChange}
+            value={formData.description}
+            onChange={handleChange}
           />
         </div>
         <button
