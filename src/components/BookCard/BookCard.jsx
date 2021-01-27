@@ -8,17 +8,13 @@ function BookCard({book}) {
         <h2>{book.title}</h2>
       </div>
       <div>
-        <dl>
-          <dt>Title :</dt>
-          <dd>{book.title}</dd>
-          <dt>Author: </dt>
-          <dd>{book.author}</dd>
-          <dt>Description: </dt>
-          <dd>{book.description}</dd>
-        </dl>
+          <strong>Author: <span>{book.author}</span></strong>
+            &nbsp;&nbsp;
+          <strong>Description: <span>{book.description}</span></strong>
       </div>
+      <br/>
       <div>
-        <Link to='/'>RETURN TO LIST</Link>
+        <Link to='/' style={{ backgroundColor: '#F67F00', border: '1px solid black', height: '5px' }}>RETURN TO LIST</Link>
       </div>
     </div>
   );
