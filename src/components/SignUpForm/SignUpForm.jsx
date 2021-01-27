@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { signUp } from '../../utilities/users-service';
+import './SignUpForm.css';
 
 export default class SignUpForm extends Component {
   state = {
@@ -48,7 +49,7 @@ export default class SignUpForm extends Component {
             <input type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
             <label>Password</label>
             <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
-            <label>Confirm</label>
+            <label>Confirm Password</label>
             <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
             <button type="submit" disabled={disable}>SIGN UP</button>
           </form>
