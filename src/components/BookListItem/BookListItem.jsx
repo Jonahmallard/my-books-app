@@ -11,7 +11,7 @@ function BookListItem({ user, book, handleDeleteBook }) {
         <h1>{book.title}</h1>
         <h3>By {book.author}</h3>
         <p>{book.description}</p>
-        <p>{book.user.name}</p>
+        <p>Posted by {book.user.name}</p>
       </div>
       <div className='panel-footer BookListItem-action-panel'>
         <Link
