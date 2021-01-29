@@ -51,7 +51,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Switch>
             <Route exact path='/' render={() => 
-              <BookListPage books={books} handleDeleteBook={handleDeleteBook} />
+              <BookListPage user={user} books={books} handleDeleteBook={handleDeleteBook} />
             } />
             <Route exact path='/index/new' render={() => 
               <AddBookPage handleAddBook={handleAddBook} /> 

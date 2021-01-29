@@ -12,13 +12,10 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <NavLink exact style={{textDecoration: 'none', color: 'black'}} exact to='/'>Home</NavLink>
+      <NavLink style={{textDecoration: 'none', color: 'black'}} exact to='/'>Home</NavLink>
       &nbsp; | &nbsp;
-      <NavLink exact style={{textDecoration: 'none', color: 'black'}} exact to='/index/new'>New</NavLink>
+      <NavLink style={{textDecoration: 'none', color: 'black'}} exact to='/index/new'>New</NavLink>
       &nbsp;&nbsp;
-        {/* <NavLink exact to='/index'>Books LIST</NavLink>
-        &nbsp;&nbsp;&nbsp;
-        <NavLink exact to='/index/new'>ADD BOOK</NavLink> */}
       <span>Welcome, <strong>{user.name}</strong></span>
       &nbsp;&nbsp;<Link to="" onClick={handleLogOut} style={{textDecoration: 'none', color: 'black'}}>Log Out</Link>
     </nav>

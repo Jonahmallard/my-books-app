@@ -1,7 +1,7 @@
 import React from 'react';
 import BookListItem from '../../components/BookListItem/BookListItem';
 
-function BookListPage({ books, handleDeleteBook}) {
+function BookListPage({ user, books, handleDeleteBook}) {
   return (
     <>
       <h1>Book List</h1>
@@ -9,6 +9,7 @@ function BookListPage({ books, handleDeleteBook}) {
         {books.map(book => 
           <BookListItem
             book={book}
+            user={user}
             key={book._id}
             handleDeleteBook={handleDeleteBook}
           />
