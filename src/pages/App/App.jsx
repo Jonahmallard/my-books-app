@@ -14,13 +14,17 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   const [books, setBooks] = useState([]);
 
-  useEffect(() => {
+  useEffect(function () {
     async function getBooks() {
       const books = await bookAPI.getAll();
-      setBooks(books) 
+      setBooks(books);
     }
-    getBooks();
-  }, [])
+    if (user) {
+      getBooks();
+    } else {
+      setBooks([]);
+    }
+  }, [user]);
 
   async function handleAddBook(newBookData) {
     const newBook = await bookAPI.create(newBookData);
