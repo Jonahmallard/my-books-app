@@ -26,7 +26,7 @@ function BookListItem({ user, book, handleDeleteBook }) {
         { user._id === book.user._id &&
         <div>
         <Link
-          className='btn btn-xs btn-warning'
+          className='btn btn-xs'
           to={{
             pathname: '/edit',
             state: {book}
@@ -35,7 +35,7 @@ function BookListItem({ user, book, handleDeleteBook }) {
           EDIT
         </Link>
           <button
-            className='btn btn-xs btn-danger margin-left-10'
+            className='btn btn-xs'
             onClick={() => handleDeleteBook(book._id)}
           >
             DELETE
