@@ -16,6 +16,7 @@ async function index(req, res) {
 async function create(req, res) {
     req.body.user = req.user._id
     const book = await Book.create(req.body);
+    await book.populate('user').execPopulate();
     res.status(201).json(book);
 }
 
@@ -28,6 +29,7 @@ async function update(req, res) {
     const updatedBook = await Book.findOneAndUpdate({ _id: req.params.id, user: req.user._id }, req.body, {
         new: true
     });
+    await updatedBook.populate('user').execPopulate();
     res.status(200).json(updatedBook);
 }
 

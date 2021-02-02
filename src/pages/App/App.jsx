@@ -37,8 +37,8 @@ export default function App() {
     history.push('/')
   }, [books, history])
 
-  async function handleUpdateBook(updatedPuppyData) {
-    const updatedBook = await bookAPI.update(updatedPuppyData);
+  async function handleUpdateBook(updatedBookData) {
+    const updatedBook = await bookAPI.update(updatedBookData);
     const newBookArray = books.map(book => book._id === updatedBook._id ? updatedBook : book)
     setBooks(newBookArray);
   }
