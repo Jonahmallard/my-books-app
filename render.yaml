@@ -1,0 +1,20 @@
+# Render Blueprint for the my-books-app demo (free tier).
+# Deploys the Express server, which also serves the built React frontend.
+# Env vars DATABASE_URL and SECRET must be set in the Render dashboard:
+#   DATABASE_URL = MongoDB Atlas connection string (M0 free cluster)
+#   SECRET       = any random string (JWT signing key)
+# PORT is set automatically by Render.
+services:
+  - type: web
+    name: my-books-app
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 16.20.2
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET
+        sync: false
