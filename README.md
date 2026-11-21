@@ -21,7 +21,7 @@ MongoDB / Mongoose, Express.js, React, Node.js, JSON Web Tokens (JWT), bcrypt
 
 ## Getting Started (run it locally)
 
-Requires Node 16.
+Requires Node 16 and a MongoDB database — the free tier at [MongoDB Atlas](https://www.mongodb.com/atlas) works, or run MongoDB locally.
 
 1. Clone the repo and install dependencies:
 
@@ -29,7 +29,7 @@ Requires Node 16.
    npm install
    ```
 
-2. Create a `.env` file with your MongoDB connection string and a JWT secret:
+2. Create a `.env` file with your MongoDB connection string and a JWT secret (any random string):
 
    ```
    DATABASE_URL=<your MongoDB connection string>
