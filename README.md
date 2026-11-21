@@ -1,13 +1,61 @@
-<h1>App Title: My Books App</h1>
+# My Books App
 
-☐<h2>Screenshot:</h2> ![alt text](https://imgur.com/X7wypDp.png)
+A MERN-stack app for keeping track of your books. Sign up, add books to your list, and update or delete any book you've added — with a details page for each one.
 
-<h2>Technologies Used:</h2> MongoDB/Mongoose, Express.js, React, and Node.js
+**Live demo:** https://my-books-app-bw2v.onrender.com — sign up for an account to try it. Hosted on Render's free tier, so the first load can take a minute to wake up.
 
-<h2>Getting Started:</h2>This app was created to allow a User to have the ability to add a book to the list of books, as well as the ability to update, and delete any book they have created and see the details of each book in the list. Click the link to begin - https://my-react-books-app.herokuapp.com/ and here's a link to my Trello board with the project's planning https://trello.com/b/lYPH392k/project-4-mern-stack
+## Screenshot
 
-<h3>Next Steps:</h3> Add to cart and checkout funcitonality
+![My Books App screenshot](https://imgur.com/X7wypDp.png)
 
-# Getting Started with Create React App
+## Technologies Used
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MongoDB / Mongoose, Express.js, React, Node.js, JSON Web Tokens (JWT), bcrypt
+
+## Features
+
+- Sign up and log in (JWT auth)
+- Add a book to your reading list
+- Edit and delete books you've added
+- View details for each book
+
+## Getting Started (run it locally)
+
+Requires Node 16.
+
+1. Clone the repo and install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Create a `.env` file with your MongoDB connection string and a JWT secret:
+
+   ```
+   DATABASE_URL=<your MongoDB connection string>
+   SECRET=<any random string>
+   ```
+
+3. Build the React frontend:
+
+   ```bash
+   npm run build
+   ```
+
+4. Start the server:
+
+   ```bash
+   node server.js
+   ```
+
+   The app runs on port 3001 (or `$PORT`).
+
+For development, run the API with `npm run server` and the React dev server with `npm start` (port 3000, proxied to the API on port 3001).
+
+## Planning
+
+Trello board with the project's planning: https://trello.com/b/lYPH392k/project-4-mern-stack
+
+## Next Steps
+
+- Add to cart and checkout functionality
