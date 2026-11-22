@@ -59,3 +59,8 @@ Trello board with the project's planning: https://trello.com/b/lYPH392k/project-
 ## Next Steps
 
 - Add to cart and checkout functionality
+
+## Screenshots
+
+![Book list](screenshots/react-books-app.png)
+![Adding a book](screenshots/react-addabook.png)
